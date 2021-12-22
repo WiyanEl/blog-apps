@@ -15,11 +15,11 @@ class PostController extends Controller
         ]);
     }
 
-    public function view($slug) 
+    public function view(Post $post) 
     {
         return view('post', [
             "title" => "Singe Post",
-            "post" => Post::find($slug)
+            "post" => $post
         ]);
     }
 }

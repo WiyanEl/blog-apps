@@ -2,10 +2,10 @@
 
 @section('container')
     <article>
-        <h2>{{ $post['title'] }}</h2>
-        <h6>Author : {{ $post['author'] }}</h6>
+        <h2>{{ $post->title }}</h2>
+        <p>By Wiyan Barkah Elmansyah in <a href="/category/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
         <p>
-            {{ $post['body'] }}
+            {!! $post->body !!}
         </p>
     </article>
     <a href="/blog" class="btn btn-success">Kembali</a>
